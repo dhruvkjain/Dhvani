@@ -1,0 +1,12 @@
+.bg{
+  height: 100vh;
+}
+.navbar{
+  width: 50px;
+  position: fixed;
+}
+.content{
+  margin-left: 60px;
+  height: 100vh;
+  width: 100%;
+}

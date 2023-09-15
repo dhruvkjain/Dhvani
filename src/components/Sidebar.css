@@ -1,0 +1,44 @@
+.sidebar{
+width: 50px;
+height: 100vh;
+display: grid;
+position: fixed;
+grid-template-rows: repeat(1fr ,7);
+background-color: #0009;
+border-radius: 0px 5px 5px 0px;
+overflow: hidden;
+z-index: 10;
+position: sticky;
+}
+svg{
+width: 30px;
+height: 30px;
+padding: 0vw 7px;
+}
+.sd {
+display: flex;
+align-items: center;
+}
+.profile{
+align-self:flex-end;
+grid-row: span 2;
+height: 10vh;
+}
+.draw{
+width: 150px;
+transition: width 0.5s ease-out;
+}
+.drawer{
+cursor: pointer;
+}
+.txt{
+padding-left: 6px;
+cursor: pointer;
+}
+.a:hover{
+background-color: #023e8a ;
+border-radius: 0px 10px 10px 0px;
+cursor: pointer;
+}
+
+  
