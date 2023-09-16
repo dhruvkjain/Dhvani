@@ -2,22 +2,18 @@ import React from "react";
 import './App.css';
 import Sidebar from "./components/Sidebar";
 import Searchbox from './components/Searchbox';
-import Song from "./components/Song";
+import Songlist from "./components/Songlist";
 
-let name , artist , link;
+let alldata ;
 
 class App extends React.Component{
   constructor(){
     super();
-    this.state={searchfield:"",songname:"",artist:"",link:""};
+    this.state={searchfield:""};
   }
-
-
   searchChange=(event)=>{
     this.setState({searchfield: event.target.value});
   }
-
-  
   componentDidUpdate(){
       fetch("https://saavn.me/search/songs?query="+this.state.searchfield+"&page=1&limit=2")
         .then (response=>{
@@ -29,9 +25,9 @@ class App extends React.Component{
             // this.setState({songname :data.data.results[0].name});
             // this.setState({artist :data.data.results[0].primaryArtists});
             // this.setState({link :data.data.results[0].downloadUrl[4].link});
-            name = data.data.results[0].name ;
-            artist = data.data.results[0].primaryArtists ;
-            link = data.data.results[0].downloadUrl[4].link ;
+            if(data.data.results != null){
+              alldata = [data.data.results];
+            }
         })
   }
 
@@ -44,10 +40,16 @@ class App extends React.Component{
         </div>
         <div className="content">
           <Searchbox change={this.searchChange}/>
-          <Song displayname={name} displayartist={artist} displaylink={link}/>
+          <div className="searchbtn">
+          {/* <button>Search</button> */}
+          </div>
+          {alldata != null && 
+            <Songlist display={alldata}/>
+          }
         </div>
       </div>
     )
+    
   }
 }
 export default App;

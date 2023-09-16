@@ -1,22 +1,19 @@
-import React from "react";
-import './Song.css';
+import React from 'react' ;
+import './Song.css' ;
 
-const Song = ({displayname,displayartist,displaylink})=>{
+const Song=({songname,songartist,songlink})=>{
     function playSong(){
         let video = document.getElementsByClassName("video")[0];
         video.classList.add("show");
     }
     return (
-        <div className="display">
-            <div className="display">
-            <video src ={displaylink} className="video" width="0px" height="0px" controls>
+        <div class="card">
+            <video src ={songlink} className="video" width="300px" height="50px" controls>
             </video>
-            <div className="details" onClick={playSong}>
-                <h1>{displayname}</h1>
-                <p>{displayartist}</p>
-            </div>
-            </div>
+            <h1>{songname}</h1>
+            <p>{songartist}</p>
         </div>
     );
 }
+
 export default Song;
