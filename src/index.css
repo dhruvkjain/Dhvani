@@ -7,10 +7,10 @@
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
   background: linear-gradient(90deg,#aea4e3,#d3ffe8);
-  /* background-image: url("https://wallpapercave.com/wp/wp9475634.jpg");
+  background-image: url("./components/lofivideos/wallpaper.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: cover; */
+  background-size: cover;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -22,7 +22,7 @@
 body {
   padding: 0px;
   margin: 0px;
-  min-width: 320px;
+  min-width: 280px;
   height: 100vh;
 }
 
