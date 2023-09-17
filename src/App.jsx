@@ -40,9 +40,6 @@ class App extends React.Component{
         </div>
         <div className="content">
           <Searchbox change={this.searchChange}/>
-          <div className="searchbtn">
-          {/* <button>Search</button> */}
-          </div>
           {alldata != null && 
             <Songlist display={alldata}/>
           }

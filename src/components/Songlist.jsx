@@ -10,7 +10,10 @@ const Songlist = ({display})=>{
                 display[0].map((data,i)=>{
                     if(data != null)
                     // return  console.log(data);
-                    return <Song songname={data.name} songartist={data.primaryArtists} songlink={data.downloadUrl[4].link}/>
+                    return <Song songname={data.name} 
+                                 songartist={data.primaryArtists} 
+                                 songlink={data.downloadUrl[4].link}
+                                 songimg={data.image[1].link}/>
                 })
             }
             {/* <div className="display">
