@@ -2,35 +2,30 @@
     color: white;
     text-align: center;
     box-shadow: 10px 10px 10px rgba(80, 78, 78, 0.5);
-    height:200px;
+    height:310px;
+    width: 200px;
     background-color: #0009;
     margin:20px;
     padding: 10px;
     border-radius: 10px;
     font-size:14px;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr 1fr;
+    /* overflow-y: auto; */
+    /* overflow-x: hidden; */
+    /* position: absolute; */
+    z-index: 0;
 }
 .poster{
-    height: 200px;
+    height:140px ;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.inner{
-    height: 200px;
-    display: grid;
-    grid-template-rows: 1fr 2fr;
-    overflow-y: auto;
-}
 img{
     border-radius: 10px;
     border: 3px solid white;
-}
-.card:hover {
-    transform: scale(1.03);
-    transition: 0.4s linear;
+    position: relative;
+    z-index: 100000;
+    transform: translateY(-15%);
 }
 .show{
     height: 50px;

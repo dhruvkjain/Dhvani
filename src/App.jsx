@@ -3,6 +3,7 @@ import './App.css';
 import Sidebar from "./components/Sidebar";
 import Searchbox from './components/Searchbox';
 import Songlist from "./components/Songlist";
+import Scroll from "./components/Scroll";
 
 let alldata ;
 
@@ -40,9 +41,11 @@ class App extends React.Component{
         </div>
         <div className="content">
           <Searchbox change={this.searchChange}/>
-          {alldata != null && 
-            <Songlist display={alldata}/>
-          }
+          <Scroll>
+            {alldata != null && 
+              <Songlist display={alldata}/>
+            }
+          </Scroll>
         </div>
       </div>
     )

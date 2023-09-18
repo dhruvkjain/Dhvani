@@ -13,7 +13,7 @@ const Song=({songname,songartist,songlink,songimg})=>{
             </div>
             <div className="inner">
                 <div className="song">
-                    <video src ={songlink} className="video" width="250px" height="50px" controls>
+                    <video src ={songlink} className="video" width="180px" height="50px" controls>
                     </video>
                 </div>
                 <h1>{songname}</h1>
