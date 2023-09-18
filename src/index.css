@@ -3,11 +3,6 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
-  background: linear-gradient(90deg,#aea4e3,#d3ffe8);
-  background-image: url("./components/lofivideos/wallpaper.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
 }
 
 body {
@@ -19,4 +14,11 @@ html
 {
   margin: 0px;
   height: 100vh;
+}
+.video{
+  width: 100%;
+  height: auto;
+  margin: 0px;
+  padding: 0px;
+  border-radius: 10px;
 }

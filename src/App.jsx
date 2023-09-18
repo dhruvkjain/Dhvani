@@ -10,7 +10,7 @@ let alldata ;
 class App extends React.Component{
   constructor(){
     super();
-    this.state={searchfield:""};
+    this.state={searchfield:"",video:""};
   }
   searchChange=(event)=>{
     this.setState({searchfield: event.target.value});
@@ -32,6 +32,10 @@ class App extends React.Component{
         })
   }
 
+  changeScene=(event)=>{
+    this.setState({video:event.target.innerHTML+".mp4"});
+    console.log(this.state.video);
+  }
 
   render(){
     return(
@@ -40,6 +44,15 @@ class App extends React.Component{
         <Sidebar />
         </div>
         <div className="content">
+            <video src={this.state.video} className="video" poster="wallpaper.jpg" autoPlay loop muted>
+            </video>
+            <div className="scenes">
+              <button onClick={this.changeScene}>DARKSTREET</button>
+              <button onClick={this.changeScene}>QUIET</button>
+              <button onClick={this.changeScene}>STUDY SESSION</button>
+              <button onClick={this.changeScene}>TRAIN</button>
+              <button onClick={this.changeScene}>WHITE OAK</button>
+            </div>
           <Searchbox change={this.searchChange}/>
           <Scroll>
             {alldata != null && 

@@ -1,5 +1,5 @@
 .bg{
-  height: 100vh;
+  height: 200vh;
 }
 .navbar{
   width: 50px;
@@ -7,16 +7,22 @@
 }
 .content{
   margin-left: 60px;
-  height: 100vh;
+  height: 200vh;
   display: grid;
   grid-template-columns: 1fr;
 }
-.searchbtn{
+.scenes{
   display: flex;
   justify-content: center;
-  text-align: center;
+  align-items: center;
+  gap: 10px;
 }
 button{
-  width: 80px;
+  width: 100px;
   height: 40px;
+  padding: 0px;
+  border: 0px;
+  border-radius: 30px;
+  font-weight: 700;
+  background: linear-gradient(130deg,#ff7a18,#af002d 41.07%,#319197 76.05%);
 }
