@@ -1,8 +1,6 @@
-# React + Vite
+# DHVANI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+DHVANI is a Music player where you can search song according to your mood and chill out your air.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- This website uses an unofficial version of JIOSAAVN API .
+- This is my first website made using Vite + React, therefore excuses me for bad CSS and styling.
