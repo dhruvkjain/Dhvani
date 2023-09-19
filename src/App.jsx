@@ -5,6 +5,13 @@ import Searchbox from './components/Searchbox';
 import Songlist from "./components/Songlist";
 import Scroll from "./components/Scroll";
 
+import DARKSTREET from "./assests/DARKSTREET.mp4";
+import QUIET from "./assests/QUIET.mp4";
+import TRAIN from "./assests/TRAIN.mp4";
+import STUDYSESSION from "./assests/STUDY SESSION.mp4";
+import WHITEOAK from "./assests/WHITE OAK.mp4";
+import wallpaper from "./assests/wallpaper.jpg";
+
 let alldata ;
 
 class App extends React.Component{
@@ -15,6 +22,7 @@ class App extends React.Component{
   searchChange=(event)=>{
     this.setState({searchfield: event.target.value});
   }
+
   componentDidUpdate(){
       fetch("https://saavn.me/search/songs?query="+this.state.searchfield+"&page=1&limit=2")
         .then (response=>{
@@ -33,9 +41,28 @@ class App extends React.Component{
   }
 
   changeScene=(event)=>{
-    this.setState({video:event.target.innerHTML+".mp4"});
-    console.log(this.state.video);
+    // console.log(event.target.innerHTML);
+    if(event.target.innerHTML.includes("DARKSTREET")){
+      this.setState({video:DARKSTREET});
+      console.log(event.target.innerHTML);
+    }
+    if(event.target.innerHTML.includes("QUIET")){
+      this.setState({video:QUIET});
+    }
+    if(event.target.innerHTML.includes("STUDY")){
+      this.setState({video:STUDYSESSION});
+    }
+    if(event.target.innerHTML.includes("WHITE")){
+      this.setState({video:WHITEOAK});
+    }
+    if(event.target.innerHTML.includes("TRAIN")){
+      this.setState({video:TRAIN});
+    }
+
+    // this.setState({video:event.target.innerHTML+".mp4"});
+    // console.log(this.state.video);
   }
+
 
   render(){
     return(
@@ -44,7 +71,7 @@ class App extends React.Component{
         <Sidebar />
         </div>
         <div className="content">
-            <video src={this.state.video} className="video" poster="wallpaper.jpg" autoPlay loop muted>
+            <video src={this.state.video} className="video" poster={wallpaper} autoPlay loop muted>
             </video>
             <div className="scenes">
               <button onClick={this.changeScene}>DARKSTREET</button>

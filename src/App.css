@@ -24,5 +24,6 @@ button{
   border: 0px;
   border-radius: 30px;
   font-weight: 700;
+  box-shadow: 4px 4px 10px #8ecae6;
   background: linear-gradient(130deg,#ff7a18,#af002d 41.07%,#319197 76.05%);
 }

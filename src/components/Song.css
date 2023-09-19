@@ -27,11 +27,16 @@ img{
     z-index: 100000;
     transform: translateY(-15%);
 }
+#waveform{
+    width: 100px;
+    height: 100px;
+}
 .show{
     height: 50px;
     width: 300px;
     background-color: transparent;
 }
 .inner{
-    overflow-y:hidden ;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
